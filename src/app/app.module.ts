@@ -12,6 +12,12 @@ import { ProfileComponent } from './components/users/profile/profile.component';
 import { LoginComponent } from './components/users/login/login.component';
 import { RegisterComponent } from './components/users/register/register.component';
 import { DetailsBookComponent } from './components/details-book/details-book.component';
+import { ListBookComponent } from './components/admin/list-book/list-book.component';
+import {FormsModule} from '@angular/forms';
+import {RoutingModule} from './routing/routing.module';
+
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -25,10 +31,15 @@ import { DetailsBookComponent } from './components/details-book/details-book.com
     ProfileComponent,
     LoginComponent,
     RegisterComponent,
-    DetailsBookComponent
+    DetailsBookComponent,
+    ListBookComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RoutingModule,
+    FormsModule,
+    NgxSpinnerModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
