@@ -18,6 +18,13 @@ import {RoutingModule} from './routing/routing.module';
 
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { NgxPaginationModule } from 'ngx-pagination';
+import {environment} from '../environments/environment';
+import { RouterModule } from '@angular/router';
+
+
+import {AngularFireModule} from '@angular/fire';
+import {AngularFireDatabaseModule} from '@angular/fire/database';
+import {AngularFireAuth} from '@angular/fire/auth';
 
 @NgModule({
   declarations: [
@@ -39,9 +46,13 @@ import { NgxPaginationModule } from 'ngx-pagination';
     RoutingModule,
     FormsModule,
     NgxSpinnerModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule,
+    RouterModule
+
   ],
-  providers: [],
+  providers: [AngularFireAuth],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

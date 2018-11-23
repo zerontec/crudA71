@@ -12,8 +12,8 @@
                   {{msgError}}
                 </div>
                 <div class="form-group">
-                  <input type="text" #name="ngModel" name="name" class="form-control" placeholder="Name" [(ngModel)]="user.name" required minlength="4"
-                    maxlength="15">
+                  <input type="text" #name="ngModel" name="name" class="form-control" placeholder="Name" [(ngModel)]="user.name"
+                   required minlength="4" maxlength="15">
                 </div>
 
                 <div class="alert alert-danger" role="alert" *ngIf="name.touched && !name.valid">

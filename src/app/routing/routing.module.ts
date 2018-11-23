@@ -16,21 +16,20 @@ const routes: Routes = [
 {path: 'offers', component: OffersComponent},
 {path: 'book/id', component: DetailsBookComponent},
 {path: 'admin/list-books', component: ListBookComponent},
-{path: ' user/login', component: LoginComponent},
+{path: 'user/login', component: LoginComponent},
 {path: 'user/register', component: RegisterComponent},
 {path: 'user/profile', component: ProfileComponent},
 {path: '**', component: Page404Component},
 
 
-
-
-
 ]
 
 @NgModule({
-  imports: [
+  imports: [RouterModule.forRoot(routes),
     CommonModule
   ],
+  exports: [RouterModule],
   declarations: []
+
 })
 export class RoutingModule { }
